@@ -59,7 +59,7 @@ void setup() {
   /* Attach to PWM pin */
   servo.attach(8);
   /* Center the servo */
-  servo.write(9);
+  servo.write(0);
 }
 
 /**
