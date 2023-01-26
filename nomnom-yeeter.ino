@@ -15,8 +15,8 @@ Servo servo;
 int servo_angle = SERVO_ANGLE_MIN;
 
 /**
- * Blink on board LED in a custom heartbeat pattern.
- * @param none
+ * @brief   Blink on board LED in a custom heartbeat pattern.
+ * @param   none
  * @return: none
  */
 void blink() {
