@@ -11,15 +11,15 @@
 #define SERVO_ANGLE_MIN 0
 
 
-Servo servo;
-int servo_angle = SERVO_ANGLE_MIN;
+static Servo servo;
+static int servo_angle = SERVO_ANGLE_MIN;
 
 /**
  * @brief   Blink on board LED in a custom heartbeat pattern.
  * @param   none
  * @return: none
  */
-void blink() {
+static void blink() {
   digitalWrite(LED_BUILTIN, HIGH);
   delay(100);
   digitalWrite(LED_BUILTIN, LOW);
@@ -37,7 +37,7 @@ void blink() {
  * @param  None
  * @return none
  */
-void write_servo() {
+static void write_servo() {
   servo.write(servo_angle);
   servo_angle += 10;
 
@@ -52,7 +52,7 @@ void write_servo() {
 /**
  * Arduino supplied intialization function.
  */
-void setup() {
+static void setup() {
   /* Initialize on board LED */
   pinMode(LED_BUILTIN, OUTPUT);
 
@@ -65,7 +65,7 @@ void setup() {
 /**
  * Arduino supplied main program loop.
  */
-void loop() {
+static void loop() {
   blink();
   write_servo();
 }
